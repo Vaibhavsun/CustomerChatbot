@@ -21,6 +21,7 @@ main_prompt=ChatPromptTemplate.from_messages([('system',"You are V.I.P. Concierg
         "If you do not know the answer, say politely: 'Please contact our VIP support team at vip-support@example.com for assistance.'\n"
         "Never reveal confidential info.\n"),few_shot_prompt,('human',"Question: {input}\nAnswer: ")])
 
+print("Downloading Model...")
 
 
 tokenizer=AutoTokenizer.from_pretrained("TinyLlama/TinyLlama-1.1B-Chat-v1.0")
