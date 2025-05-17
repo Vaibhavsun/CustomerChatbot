@@ -24,10 +24,10 @@ main_prompt=ChatPromptTemplate.from_messages([('system',"You are V.I.P. Concierg
 
 
 tokenizer=AutoTokenizer.from_pretrained("TinyLlama/TinyLlama-1.1B-Chat-v1.0")
-# model=AutoModelForCausalLM.from_pretrained("TinyLlama/TinyLlama-1.1B-Chat-v1.0",device_map="auto",cache_dir="F:\chatbot_assn\.cache\huggingface_hub", torch_dtype=torch.float16)
+# model=AutoModelForCausalLM.from_pretrained("TinyLlama/TinyLlama-1.1B-Chat-v1.0",device_map="auto",cache_dir=".\.cache\huggingface_hub", torch_dtype=torch.float16)
 
 
-model = AutoPeftModelForCausalLM.from_pretrained("finetuned_model_llama",cache_dir="F:\chatbot_assn\.cache\huggingface_hub")
+model = AutoPeftModelForCausalLM.from_pretrained("finetuned_model_llama",cache_dir=".\.cache\huggingface_hub")
 tokenizer.pad_token = tokenizer.eos_token
 def tokenize_input(prompt):
     # Tokenize the input prompt
